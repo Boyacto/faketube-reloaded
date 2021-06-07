@@ -1,0 +1,10 @@
+extends base
+include mixins/video
+
+block content
+    h2 Welcome To Trending Videos
+    //- convention is each {singular} in {plural}
+    each video in videos 
+        +video(video)
+    else 
+        li Sorry nothing found.
